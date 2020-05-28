@@ -36,6 +36,17 @@ class M_libro extends CI_Model{
         return $this->db->insert_id();
     }
 
+    function getRating($key){
+        $this->db->select('b.id AS id, ROUND(AVG(br.rating)) AS rating');
+        $this->db->from('book b');
+        $this->db->join('book_rating br', 'b.id = br.book_id');
+        $this->db->where('b.id', $key);
+
+        $query = $this->db->get();
+        return $query->row();
+    }
+
+
     function updateData($key, $data) {
         $this->db->where($this->table_id, $key);
         $this->db->update($this->table, $data);

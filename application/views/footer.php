@@ -38,76 +38,7 @@
 <!-- Starrr JavaScript -->
 <script src="<?=base_url()?>assets/dist/starrr.js"></script>
 
-<script>
-    $( document ).ready(function() {
-        for (var i = 0; i < <?=$count?>; i++) {
-            iniciar_rating(i);
-        }
-        function iniciar_rating(i){
-            var value   = $('#rate_value'+i).val();
-            var id      = $('#book_id'+i).val();
-            $('#rating'+i).starrr({
-                rating: value,
-                change: function(e, value){
-                    dataEntry(id, value);
-                    /*if (value) {
-                        $('.your-choice-was').show();
-                        $('.choice').text(value);
-                    } else {
-                        $('.your-choice-was').hide();
-                    }*/
-                }
-            });
-        }
-    });
-    
-    function dataEntry(id, value){
-        var formData = new FormData();
-        formData.append('id', id);
-        formData.append('rating', value);
-        $.ajax({
-            // la URL para la petición
-            url : '<?=base_url()?>libreria/calificar/libro',
-            // la información a enviar
-            // (también es posible utilizar una cadena de datos)
-            data : formData,
 
-            // especifica si será una petición POST o GET
-            type : 'POST',
-
-            // el tipo de información que se espera de respuesta
-            // dataType : 'json',
-
-            // código a ejecutar si la petición es satisfactoria;
-            // la respuesta es pasada como argumento a la función
-            async: false,
-            success : function(data) {
-                //alert(data);
-                console.log(data);
-                if(data > 0){
-                    alert('exito');
-                }else{
-                    alert('error');
-                }
-            },
-            // código a ejecutar si la petición falla;
-            // son pasados como argumentos a la función
-            // el objeto de la petición en crudo y código de estatus de la petición
-            error : function(xhr, status) {
-                alert("error de solicitud");
-            },
-            cache: false,
-            contentType: false,
-            processData: false
-            // código a ejecutar sin importar si la petición falló o no
-            //complete : function(xhr, status) {
-                //alert('Petición realizada');
-            //}
-        });  
-    }
-        
-        
-</script>
 
 </body>
 

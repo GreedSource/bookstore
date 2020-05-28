@@ -108,6 +108,11 @@ input[type="radio"]:checked ~ label {
 
 .col-md-2, .col-sm-2, .col-lg-2{
     text-align: center;
+    padding-bottom: 1em;
+}
+
+.img-preview{
+    border: solid 1px;
 }
 
 </style>
