@@ -37,8 +37,13 @@
 <script src="<?=base_url()?>assets/plugins/bower_components/toast-master/js/jquery.toast.js"></script>
 <!-- Starrr JavaScript -->
 <script src="<?=base_url()?>assets/dist/starrr.js"></script>
+<script src="<?=base_url()?>assets/js/jquery.redirect.js"></script>
 
-
+<script>
+    function addBook(){
+        $.redirect('<?=base_url()?>nuevo/libro');
+    }
+</script>
 
 </body>
 

@@ -115,8 +115,12 @@
         });  
     }
     
-    function redirect(){
-        $.redirect('<?=base_url()?>ver/libro', {user: "johnDoe", password: "12345"}, "POST", "_blank");
+    function redirect(key){
+        $.redirect('<?=base_url()?>ver/libro', {key: key}, "POST", "_blank");
+    }
+
+    function addBook(){
+        $.redirect('<?=base_url()?>nuevo/libro');
     }
 
 </script>

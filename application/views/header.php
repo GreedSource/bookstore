@@ -173,7 +173,7 @@ input[type="radio"]:checked ~ label {
             <div class="sidebar-nav slimscrollsidebar">
                 <div class="center p-20 borde2" style="margin-top:180px;">
                     <center>
-                        <button onclick="location.href='libro'" class="btn botona  btn-block waves-effect waves-light text-center">+ Agregar Libro</button>
+                        <button onclick="addBook()" class="btn botona  btn-block waves-effect waves-light text-center">+ Agregar Libro</button>
                     </center>
                 </div>
 
