@@ -31,6 +31,11 @@ class M_libro extends CI_Model{
         return $this->db->insert_id();
     }
 
+    function bookRating($data) {
+        $this->db->insert('book_rating', $data);
+        return $this->db->insert_id();
+    }
+
     function updateData($key, $data) {
         $this->db->where($this->table_id, $key);
         $this->db->update($this->table, $data);

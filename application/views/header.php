@@ -24,6 +24,8 @@
     <link href="<?=base_url()?>assets/html/css/animate.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="<?=base_url()?>assets/html/css/style.css" rel="stylesheet">
+    <!-- Starr CSS -->
+    <link href="<?=base_url()?>assets/dist/starrr.css" rel="stylesheet">
     <!-- color CSS -->
     <link href="<?=base_url()?>assets/html/css/colors/default.css" id="theme" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -92,7 +94,6 @@ label {
 }
 
 .clasificacion {
-  
   unicode-bidi: bidi-override;
 }
 
@@ -104,6 +105,11 @@ label:hover ~ label {
 input[type="radio"]:checked ~ label {
   color: orange;
 }
+
+.col-md-2, .col-sm-2, .col-lg-2{
+    text-align: center;
+}
+
 </style>
 
 <body class="fix-header">

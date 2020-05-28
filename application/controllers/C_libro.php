@@ -40,12 +40,16 @@ class C_libro extends CI_Controller {
     }
 
     public function rateBook(){
-        $this->load->view('bookstore/test');
+        //$this->load->view('bookstore/test');
+        $data['book_id'] = base64_decode($_POST['id']);
+        $data['rating'] = $_POST['rating'];
+        echo $this->ml->bookRating($data);
     }
 
     public function insert(){
-        $data['name'] = 'hola mundo';
-        $data['img'] = 'default.png';
+        $hash = bin2hex(random_bytes(16));
+        $data['title'] = 'Rebelión en la granja';
+        $data['author'] = 'George Orwell';
         $data['description'] = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ultrices consectetur varius. Aliquam felis ex, facilisis ultrices mauris at, gravida sollicitudin ipsum. Nam tristique hendrerit laoreet. Maecenas vel elementum lectus. Ut quis varius augue, sit amet ultrices augue. Cras vel rutrum felis. Etiam velit dolor, lacinia at odio suscipit, consectetur rutrum libero. Cras ante nibh, suscipit et tellus viverra, tristique placerat massa.';
         echo $this->ml->dataEntry($data);
     }
