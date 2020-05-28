@@ -43,6 +43,10 @@
     function addBook(){
         $.redirect('<?=base_url()?>nuevo/libro');
     }
+
+    function logout(){
+        $.redirect('<?=base_url()?>logout');
+    }
 </script>
 
 </body>

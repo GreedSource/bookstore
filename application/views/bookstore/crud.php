@@ -38,15 +38,17 @@
                                 <br>
                                 <div class="row">
                                     <div class="col-md-4 col-lg-4 col-sm-4"></div>
-                                    <div class="col-md-2 col-lg-2 col-sm-2">
+                                    <div class="col-md-1 col-lg-1 col-sm-1">
                                         <input type="submit" class="btn btn-default form-control" value="Guardar">
+                                    </div>
+                                    <div class="col-md-1 col-lg-1 col-sm-1">
+                                        <a href="<?=base_url()?>" class="btn btn-primary form-control" style="color:white;">Regresar</a>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
                 </div>
-                <?=getcwd()?>
                 <!-- ============================================================== -->
 <?php $this->load->view('footer') ;?>
 

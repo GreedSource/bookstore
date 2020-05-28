@@ -203,7 +203,7 @@ input[type="radio"]:checked ~ label {
                 </ul>
                 <div class="center p-20">
                     <center>
-                        <button class="btn btn-danger  btn-block waves-effect waves-light text-center">Cerrar Sesión</button>
+                        <button onclick="logout()" class="btn btn-danger  btn-block waves-effect waves-light text-center">Cerrar Sesión</button>
                     </center>
                 </div>
 

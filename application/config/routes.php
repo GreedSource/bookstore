@@ -53,7 +53,10 @@ $route['default_controller'] = 'C_libro';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['inicio']           = 'C_libro/index';
-$route['nuevo/libro']      = 'C_libro/addBook';
-$route['agregar/libro']    = 'C_libro/insert';
-$route['calificar/libro']  = 'C_libro/rateBook';
+$route['inicio']            = 'C_libro/index';
+$route['login']             = 'C_libro/login';
+$route['logout']            = 'C_libro/logout';
+$route['registro']          = 'C_libro/register';
+$route['nuevo/libro']       = 'C_libro/addBook';
+$route['agregar/libro']     = 'C_libro/insert';
+$route['calificar/libro']   = 'C_libro/rateBook';

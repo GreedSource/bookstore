@@ -119,8 +119,6 @@
         $.redirect('<?=base_url()?>ver/libro', {key: key}, "POST", "_blank");
     }
 
-    function addBook(){
-        $.redirect('<?=base_url()?>nuevo/libro');
-    }
+    
 
 </script>
