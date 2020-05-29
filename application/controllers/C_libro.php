@@ -29,14 +29,13 @@ class C_libro extends CI_Controller {
 	public function index()
 	{
         if (!empty($_SESSION['user'])){
-            $libros = $this->ml->findAll();
+            $libros = (!isset($_GET['search'])) ? $this->ml->findAll() : $this->ml->filterAll($_GET['search']);
             $rating = null;
             foreach ($libros as $l){
                 $rating[] = $this->ml->getRating($l->id);
             }
             $data['libros'] = $libros;
             $data['rating'] = $rating;
-            //print_r($rating);
             $this->load->view('bookstore/index', $data);
         }else{
             header('Location: '. base_url().'login');
