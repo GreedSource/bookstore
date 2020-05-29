@@ -27,6 +27,20 @@
 	<script src="<?=base_url();?>assets/plugins/pace/pace.min.js"></script>
 	<!-- ================== END BASE JS ================== -->
 </head>
+<style>
+.box-blue {
+
+overflow:hidden;
+margin-top: 2px;
+background-color:#fff;
+border:1px solid #D35400;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+}
+.box-blue:hover{
+    border:2px solid #48C9B0;
+}
+</style>
 <body class="pace-top bg-white">
 	<!-- begin #page-loader -->
 	<div id="page-loader" class="fade show"><span class="spinner"></span></div>
@@ -38,7 +52,7 @@
         <div class="register register-with-news-feed">
             <!-- begin news-feed -->
             <div class="news-feed">
-                <div class="news-image" style="background-image: url(<?=base_url();?>assets/img/login-bg/login-bg-9.jpg)"></div>
+                <div class="news-image" style="background-image: url(https://4.bp.blogspot.com/-PpiOSO-8kRk/WbbxfFLan_I/AAAAAAABO2Q/PsDJwzXSiL4egHs16busXkrkS0W8Y5GLgCLcBGAs/s1600/ebook.jpg)"></div>
                 <div class="news-caption">
                     <h4 class="caption-title"><b>Libros</b> Yuc</h4>
                     <p>
@@ -61,30 +75,30 @@
                         <label class="control-label">Nombre <span class="text-danger">*</span></label>
                         <div class="row row-space-10">
                             <div class="col-md-12 m-b-15">
-                                <input type="text" class="form-control" placeholder="Nombre" id="name" name="name" required />
+                                <input type="text" class="form-control box-blue" placeholder="Nombre" id="name" name="name" required />
                             </div>
                         </div>
                         <label class="control-label">Correo electrónico <span class="text-danger">*</span></label>
                         <div class="row m-b-15">
                             <div class="col-md-12">
-                                <input type="text" class="form-control" id="email" name="email" placeholder="Correo electrónico" required />
+                                <input type="text" class="form-control box-blue" id="email" name="email" placeholder="Correo electrónico" required />
                             </div>
                         </div>
                         <label class="control-label">Re-ingresar correo electrónico <span class="text-danger">*</span></label>
                         <div class="row m-b-15">
                             <div class="col-md-12">
-                                <input type="text" class="form-control" id="confirmation" name="confirmation" placeholder="Re-ingresar correo electrónico" required />
+                                <input type="text" class="form-control box-blue" id="confirmation" name="confirmation" placeholder="Re-ingresar correo electrónico" required />
                             </div>
                         </div>
                         <label class="control-label">Contraseña <span class="text-danger">*</span></label>
                         <div class="row m-b-15">
                             <div class="col-md-12">
-                                <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required />
+                                <input type="password" class="form-control box-blue" id="password" name="password" placeholder="Contraseña" required />
                             </div>
                         </div>
                         
-                        <div class="register-buttons">
-                            <button type="submit" class="btn btn-primary btn-block btn-lg">Registrarse</button>
+                        <div class="register-buttons"><br>
+                            <button type="submit" class="btn btn-success btn-block btn-lg">Registrarse</button>
                         </div>
                         <div class="m-t-20 m-b-40 p-b-40 text-inverse">
                             ¿Ya estás registrado? Presiona <a href="<?=base_url()?>login">aqui</a> para login.

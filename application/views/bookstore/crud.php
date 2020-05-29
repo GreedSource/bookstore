@@ -32,6 +32,18 @@ border-radius: 5px;
     background-color:#154360;
     color:#fff;
 }
+.botoregresar{
+overflow:hidden;
+background-color:#fff;
+border:1px solid #D35400;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+color: #000;
+}
+.botoregresar:hover{
+    background-color:#D35400;
+    color:#fff;
+}
 </style>              
                 <div class="row bg-title" style="margin-top:-25px;">
                     <div class="col-md-12 col-lg-12 col-sm-12">
@@ -57,15 +69,19 @@ border-radius: 5px;
                                         Autor:
                                         <input type="text" name="author" id="author" class="form-control box-blue" required><br>
                                         Descripción:
-<<<<<<< HEAD
+
                                         <textarea type="description" name="description" id="description" class="form-control box-blue" required> </textarea><br>
+                                        <div class="col-md-2"></div>
                                         <div class="col-md-4">
                                         <input type="submit" class="btn btn-block  boto34" value="Guardar" >
                                         </div>
+                                        <div class="col-md-4">
+                                        <a href="<?=base_url()?>" class="btn btn-block botoregresar">Regresar</a>
+                                        </div>
+                                        <div class="col-md-2"></div>
 
                                     </div>
                                     
-=======
                                     </div>
                                 </div>
                                 <br>
@@ -73,10 +89,7 @@ border-radius: 5px;
                                 <br>
                                 <div class="row">
                                     
-                                    <div class="col-md-1 col-lg-1 col-sm-1">
-                                        <a href="<?=base_url()?>" class="btn btn-primary form-control" style="color:white;">Regresar</a>
-                                    </div>
->>>>>>> d28e5f28c8c218570960f8acc25a8a966ed42f79
+
                                 </div>
                                 <hr>
                             </form>

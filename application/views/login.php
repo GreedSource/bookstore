@@ -26,6 +26,20 @@
 	<script src="<?=base_url();?>assets/plugins/pace/pace.min.js"></script>
 	<!-- ================== END BASE JS ================== -->
 </head>
+<style>
+.box-blue {
+
+overflow:hidden;
+margin-top: 2px;
+background-color:#fff;
+border:1px solid #D35400;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+}
+.box-blue:hover{
+    border:2px solid #48C9B0;
+}
+</style>
 <body class="pace-top bg-white">
 	<!-- begin #page-loader -->
 	<div id="page-loader" class="fade show"><span class="spinner"></span></div>
@@ -37,18 +51,20 @@
         <div class="login login-with-news-feed">
             <!-- begin news-feed -->
             <div class="news-feed">
-                <div class="news-image" style="background-image: url(<?=base_url();?>assets/img/login-bg/login-bg-11.jpg)"></div>
+                <div class="news-image" style="background-image: url(https://www.1zoom.me/big2/371/296873-Sepik.jpg)"></div>
                 <div class="news-caption">
                     <h4 class="caption-title"><b>Libros</b> Yuc</h4>
                     <p>
                         Inicia sesión para acceder al catalogo de libros disponibles.
                     </p>
                 </div>
+                
             </div>
             <!-- end news-feed -->
             <!-- begin right-content -->
             <div class="right-content">
                 <!-- begin login-header -->
+                
                 <div class="login-header">
                     <div class="brand">
                         <span class="logo"></span> <b>Libros</b> Yuc
@@ -63,12 +79,14 @@
                 <div class="login-content">
                     <form action="<?=base_url()?>login" method="POST" class="margin-bottom-0" onsubmit="findUser(event, this)">
                         <div class="form-group m-b-15">
-                            <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="Correo electrónico" required />
+                            E-mail:
+                            <input type="email" class="form-control form-control-lg box-blue" id="email" name="email" placeholder="Correo electrónico" required />
                         </div>
                         <div class="form-group m-b-15">
-                            <input type="password" class="form-control form-control-lg" id="password" name="password" placeholder="Contraseña" required />
+                            Contraseña:
+                            <input type="password" class="form-control form-control-lg box-blue" id="password" name="password" placeholder="Contraseña" required />
                         </div>
-                        <div class="login-buttons">
+                        <div class="login-buttons"><br>
                             <button type="submit" class="btn btn-success btn-block btn-lg">Iniciar sesión</button>
                         </div>
                         <div class="m-t-20 m-b-40 p-b-40 text-inverse">
