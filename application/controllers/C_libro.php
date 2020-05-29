@@ -94,6 +94,19 @@ class C_libro extends CI_Controller {
         //echo $this->ml->dataEntry($data);
     }
 
+    public function details(){
+
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $key = base64_decode($_POST['key']);
+            $data['libro'] = $this->ml->find($key);
+            $data['rating'] = $this->ml->getRating($key);
+            $this->load->view('bookstore/details', $data);
+        }else{
+            header('Location: '. base_url());
+        }
+        
+    }
+
     public function register(){
         if(empty($_SESSION['user'])){
             if ($_SERVER['REQUEST_METHOD'] == 'POST'){
