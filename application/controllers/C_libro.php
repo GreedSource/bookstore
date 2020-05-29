@@ -23,24 +23,26 @@ class C_libro extends CI_Controller {
         parent::__construct();
         $this->load->model('M_libro', 'ml');
         $this->load->helper('url');
+        session_start();
     }
 
 	public function index()
 	{
-        $libros = $this->ml->findAll();
-        $rating = null;
-        foreach ($libros as $l){
-            $rating[] = $this->ml->getRating($l->id);
+        if (!empty($_SESSION['user'])){
+            $libros = $this->ml->findAll();
+            $rating = null;
+            foreach ($libros as $l){
+                $rating[] = $this->ml->getRating($l->id);
+            }
+            $data['libros'] = $libros;
+            $data['rating'] = $rating;
+            //print_r($rating);
+            $this->load->view('bookstore/index', $data);
+        }else{
+            header('Location: '. base_url().'login');
         }
-        $data['libros'] = $libros;
-        $data['rating'] = $rating;
-        //print_r($rating);
-		$this->load->view('bookstore/index', $data);
     }
     
-    public function test(){
-        $this->load->view('bookstore/test');
-    }
 
     public function addBook(){
         $this->load->view('bookstore/crud');
@@ -92,4 +94,58 @@ class C_libro extends CI_Controller {
         //echo $this->ml->dataEntry($data);
     }
 
+    public function register(){
+        if(empty($_SESSION['user'])){
+            if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+                $this->load->model('M_user', 'mu');
+                $data['name'] = $_POST['name'];
+                $data['email'] = $_POST['email'];
+                $data['password'] = base64_encode($_POST['password']);
+                $user = $this->mu->find($data['email']);
+                if (empty($user)){
+                    $user = $this->mu->dataEntry($data);
+                    if ($user > 0){
+                        $user = $this->mu->login($data['email'], $data['password']);
+                        $_SESSION['user'] = $user;
+                        echo 1;
+                    }else{
+                        echo $user;
+                    }
+                }else{
+                    echo 'existe';
+                }
+            }else{
+                $this->load->view('register');
+            }
+        }else{
+            header('Location: '. base_url());
+        }
+    }
+
+    public function login(){
+        if(empty($_SESSION['user'])){
+            if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+                $this->load->model('M_user', 'mu');
+                $email = $_POST['email'];
+                $password = base64_encode($_POST['password']);
+                $user = $this->mu->login($email, $password);
+                if(!empty($user)){
+                    $_SESSION['user'] = $user;
+                    echo 1; 
+                }else{
+                    echo 0;
+                }
+            }else{
+                $this->load->view('login');
+            }
+        }else{
+            header('Location: '. base_url());
+        }
+    }
+
+    public function logout(){
+        $_SESSION['user'] = null;
+        header('Location: '. base_url());
+    }
+ 
 }

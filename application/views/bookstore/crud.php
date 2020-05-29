@@ -57,6 +57,7 @@ border-radius: 5px;
                                         Autor:
                                         <input type="text" name="author" id="author" class="form-control box-blue" required><br>
                                         Descripción:
+<<<<<<< HEAD
                                         <textarea type="description" name="description" id="description" class="form-control box-blue" required> </textarea><br>
                                         <div class="col-md-4">
                                         <input type="submit" class="btn btn-block  boto34" value="Guardar" >
@@ -64,13 +65,34 @@ border-radius: 5px;
 
                                     </div>
                                     
+=======
+                                        <textarea type="description" name="description" id="description" class="form-control" required> </textarea>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-4 col-lg-4 col-sm-4"></div>
+                                    <div class="col-md-2 col-lg-2 col-sm-2">
+                                        <img src="<?=base_url()?>storage/images/default.jpg" class="responsive img-preview" id="my_img" style="width: 220px; height:300px;" onclick="openWindow()">
+                                        <input id="userfile" name="userfile" type="file" class="img-file" onchange="readURL(this)" style="display:none;" />
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                    <div class="col-md-4 col-lg-4 col-sm-4"></div>
+                                    <div class="col-md-1 col-lg-1 col-sm-1">
+                                        <input type="submit" class="btn btn-default form-control" value="Guardar">
+                                    </div>
+                                    <div class="col-md-1 col-lg-1 col-sm-1">
+                                        <a href="<?=base_url()?>" class="btn btn-primary form-control" style="color:white;">Regresar</a>
+                                    </div>
+>>>>>>> d28e5f28c8c218570960f8acc25a8a966ed42f79
                                 </div>
                                 <hr>
                             </form>
                         </div>
                     </div>
                 </div>
-                <?=getcwd()?>
                 <!-- ============================================================== -->
 <?php $this->load->view('footer') ;?>
 
