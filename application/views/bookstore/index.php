@@ -1,5 +1,19 @@
 <?php $this->load->view('header');?>
 <?php $this->load->view('banner');?>
+<style>
+    .box-blue {
+
+overflow:hidden;
+background-color:#fff;
+border:1px solid #fff;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+}
+.box-blue:hover{
+    background-color:#ABB2B9;
+    color:#fff;
+}
+</style>
                 <div class="row bg-title" style="margin-top:-25px;">
                     <div class="col-md-12 col-lg-12 col-sm-12">
                     <!--<h5>Click to rate:</h5>
@@ -13,7 +27,7 @@
                             <div class="row">
                             <!--for($i=0; $i<12; $i++)-->
                                 <?php foreach($libros as $libro) {?>
-                                    <div class="col-md-2 col-sm-2 col-lg-2">
+                                    <div class="col-md-3 col-sm-2 col-lg-3 box-blue">
                                     <img src="<?=base_url()?>storage/images/<?=$libro->img?>" class="responsive img-preview" style="width: 220px; height:300px;">
                                     <h5><?=$libro->title?></h5>
                                     <h5>por <?=$libro->author?></h5>
