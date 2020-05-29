@@ -66,23 +66,13 @@ border-radius: 5px;
                                     </div>
                                     
 =======
-                                        <textarea type="description" name="description" id="description" class="form-control" required> </textarea>
                                     </div>
                                 </div>
                                 <br>
-                                <div class="row">
-                                    <div class="col-md-4 col-lg-4 col-sm-4"></div>
-                                    <div class="col-md-2 col-lg-2 col-sm-2">
-                                        <img src="<?=base_url()?>storage/images/default.jpg" class="responsive img-preview" id="my_img" style="width: 220px; height:300px;" onclick="openWindow()">
-                                        <input id="userfile" name="userfile" type="file" class="img-file" onchange="readURL(this)" style="display:none;" />
-                                    </div>
-                                </div>
+
                                 <br>
                                 <div class="row">
-                                    <div class="col-md-4 col-lg-4 col-sm-4"></div>
-                                    <div class="col-md-1 col-lg-1 col-sm-1">
-                                        <input type="submit" class="btn btn-default form-control" value="Guardar">
-                                    </div>
+                                    
                                     <div class="col-md-1 col-lg-1 col-sm-1">
                                         <a href="<?=base_url()?>" class="btn btn-primary form-control" style="color:white;">Regresar</a>
                                     </div>
