@@ -144,7 +144,7 @@ input[type="radio"]:checked ~ label {
                 </li>
 
                 <li>
-                    <a class="profile-pic" href="#"> <img src="<?=base_url()?>assets/plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs">Steave</b></a>
+                    <a class="profile-pic" href="#"> <img src="<?=base_url()?>assets/plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs"><?=$_SESSION['user']->name?></b></a>
                 </li>
             </ul>
                 
