@@ -27,7 +27,7 @@ border-radius: 5px;
                             <div class="row">
                             <!--for($i=0; $i<12; $i++)-->
                                 <?php foreach($libros as $libro) {?>
-                                    <div class="col-md-3 col-sm-2 col-lg-3 box-blue">
+                                    <div class="col-md-3 col-sm-2 col-lg-3 box-blue" onclick="redirect('<?=base64_encode($libro->id)?>')">
                                     <img src="<?=base_url()?>storage/images/<?=$libro->img?>" class="responsive img-preview" style="width: 220px; height:300px;">
                                     <h5><?=$libro->title?></h5>
                                     <h5>por <?=$libro->author?></h5>
@@ -130,9 +130,7 @@ border-radius: 5px;
     }
     
     function redirect(key){
-        $.redirect('<?=base_url()?>ver/libro', {key: key}, "POST", "_blank");
-    }
-
-    
+        $.redirect('<?=base_url()?>detalles/libro', {key: key}, "POST", "_blank");
+    }    
 
 </script>

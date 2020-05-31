@@ -26,6 +26,15 @@ class M_libro extends CI_Model{
         return $query->result();
     }
 
+    function filterAll($like) {
+        $this->db->select();
+        $this->db->from($this->table);
+        $this->db->like('title', $like, 'both'); 
+
+        $query = $this->db->get();
+        return $query->result();
+    }
+
     function dataEntry($data) {
         $this->db->insert($this->table, $data);
         return $this->db->insert_id();

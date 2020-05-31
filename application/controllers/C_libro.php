@@ -29,14 +29,13 @@ class C_libro extends CI_Controller {
 	public function index()
 	{
         if (!empty($_SESSION['user'])){
-            $libros = $this->ml->findAll();
+            $libros = (!isset($_GET['search'])) ? $this->ml->findAll() : $this->ml->filterAll($_GET['search']);
             $rating = null;
             foreach ($libros as $l){
                 $rating[] = $this->ml->getRating($l->id);
             }
             $data['libros'] = $libros;
             $data['rating'] = $rating;
-            //print_r($rating);
             $this->load->view('bookstore/index', $data);
         }else{
             header('Location: '. base_url().'login');
@@ -92,6 +91,19 @@ class C_libro extends CI_Controller {
         //print_r($_POST);
         //print_r($_FILES);
         //echo $this->ml->dataEntry($data);
+    }
+
+    public function details(){
+
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+            $key = base64_decode($_POST['key']);
+            $data['libro'] = $this->ml->find($key);
+            $data['rating'] = $this->ml->getRating($key);
+            $this->load->view('bookstore/details', $data);
+        }else{
+            header('Location: '. base_url());
+        }
+        
     }
 
     public function register(){

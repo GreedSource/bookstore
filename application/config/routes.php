@@ -60,3 +60,4 @@ $route['registro']          = 'C_libro/register';
 $route['nuevo/libro']       = 'C_libro/addBook';
 $route['agregar/libro']     = 'C_libro/insert';
 $route['calificar/libro']   = 'C_libro/rateBook';
+$route['detalles/libro']    = 'C_libro/details';

@@ -8,7 +8,7 @@
                         <ul class="nav navbar-top-links navbar-right pull-right">
                             <li>
                                 <form role="search" class="app-search hidden-sm hidden-xs m-r-10">
-                                <input type="text" placeholder="Buscar..." class="form-control titulodiv">
+                                <input type="text" placeholder="Buscar..." name="search" id="search" class="form-control titulodiv">
                                 </form>
                             </li>
 
