@@ -34,51 +34,68 @@ border-radius: 5px;
 }
 .botoregresar{
 overflow:hidden;
-background-color:#fff;
-border:1px solid #D35400;
+background-color:#3498DB;
+border:1px solid #47CAB0;
 -webkit-border-radius: 5px;
 border-radius: 5px;
 color: #000;
 }
 .botoregresar:hover{
-    background-color:#D35400;
-    color:#fff;
+    background-color:#47CAB0;
+}
+.paraditar{
+    border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+border: 1px solid #fff;
+-webkit-box-shadow: -1px 2px 19px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 2px 19px 0px rgba(0,0,0,0.75);
+box-shadow: -1px 2px 19px 0px rgba(0,0,0,0.75);
 }
 </style>
 <div class="row bg-title" style="margin-top:-25px;">
-                    <div class="col-md-12 col-lg-12 col-sm-12">
+                    <div class="col-md-12 col-lg-12 col-sm-12 paraditar">
                     <!--<h5>Click to rate:</h5>
                     <div>&nbsp;
                     <span class='your-choice-was' style='display: none;'>
                         Your rating was <span class='choice'></span>.
                     </span>
                     </div> -->
+                    <div class="panel panel-info">
                         <div class="white-box">
-                            <h3 class="box-title">Detalles del libro</h3>
-                            
+                        <div class="panel-heading">
+                            <div class="col-md-4">Detalles del libro</div>
+                                <div class="col-md-4"></div>
+                                <div class="col-md-4"><a href="<?=base_url()?>" class="btn botoregresar pull-right" style="color:#fff;">Regresar</a></div><br>
+                                        
+                            </div><br><br>
+                        
                                 <div class="row">
-                                <div class="col-md-4 col-lg-4 col-sm-4">
+                                <div class="col-md-3 col-lg-3 col-sm-3">
                                     <div class="col-md-2 col-lg-2 col-sm-2">
                                         <img src="<?=base_url()?>storage/images/<?=$libro->img?>" class="responsive img-preview paraimg" id="my_img" style="width: 220px; height:300px;">
+                                        
+                                    </div>
+                                    </div>
+                                    
+                                    <div class="col-md-9 col-lg-9 col-sm-9">
+                                    <ul class="list-group">
+                                        <li class="list-group-item"><b>Titulo:</b><br><br> <?=$libro->title;?><br></li>
+                                        <li class="list-group-item"><b>Autor:</b><br><br> <?=$libro->author?><br> </li>
+                                        <li class="list-group-item"><b>Rating:</b><br>
                                         <div class='starrr' id="starrr" style="width: 220px; padding-top:1em;"></div>
-                                    </div>
-                                    </div>
-                                    <div class="col-md-8 col-lg-8 col-sm-8">
-                                        Titulo:
-                                        <input type="text" name="title" id="title" class="form-control box-blue" readonly value="<?=$libro->title?>"><br>
-                                        Autor:
-                                        <input type="text" name="author" id="author" class="form-control box-blue" value="<?=$libro->author?>" readonly><br>
-                                        Descripción:
-                                        <textarea type="description" name="description" id="description" class="form-control box-blue" readonly><?=$libro->description?></textarea><br>
-                                        <div class="col-md-2"></div>
-                                        <div class="col-md-8">
-                                        <a href="<?=base_url()?>" class="btn btn-block botoregresar">Regresar</a>
-                                        </div>
-                                        <div class="col-md-2"></div>
+                                        </li>
+                                        
+                                        <li class="list-group-item"><b> Descripción:</b><br><br> <?=$libro->description?></li>
+                                    </ul>
+
+                                       
+                                        
 
                                     </div>
                                     
                                     </div>
+                        
                                 </div>
                                 <br>
 
@@ -90,6 +107,7 @@ color: #000;
                                 <hr>
                             
                         </div>
+                    </div>
                     </div>
                 </div>
 

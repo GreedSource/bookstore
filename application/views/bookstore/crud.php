@@ -44,9 +44,18 @@ color: #000;
     background-color:#D35400;
     color:#fff;
 }
+.paraditar{
+    border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+border: 1px solid #212F3C;
+-webkit-box-shadow: -1px 2px 19px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 2px 19px 0px rgba(0,0,0,0.75);
+box-shadow: -1px 2px 19px 0px rgba(0,0,0,0.75);
+}
 </style>              
                 <div class="row bg-title" style="margin-top:-25px;">
-                    <div class="col-md-12 col-lg-12 col-sm-12">
+                    <div class="col-md-12 col-lg-12 col-sm-12 paraditar">
                     <!--<h5>Click to rate:</h5>
                     <div>&nbsp;
                     <span class='your-choice-was' style='display: none;'>
@@ -57,7 +66,7 @@ color: #000;
                             <h3 class="box-title">Añadir libro</h3>
                             <form method="post" onsubmit="dataEntry(event, this)" enctype="multipart/form-data">
                                 <div class="row">
-                                <div class="col-md-4 col-lg-4 col-sm-4">
+                                <div class="col-md-4 col-lg-4 col-sm-4 ">
                                     <div class="col-md-2 col-lg-2 col-sm-2">
                                         <img src="<?=base_url()?>storage/images/default.jpg" class="responsive img-preview paraimg" id="my_img" style="width: 220px; height:300px;" onclick="openWindow()">
                                         <input id="userfile" name="userfile" type="file" class="img-file " onchange="readURL(this)" style="display:none;" />

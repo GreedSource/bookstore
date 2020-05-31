@@ -144,7 +144,7 @@ input[type="radio"]:checked ~ label {
                 </li>
 
                 <li>
-                    <a class="profile-pic" href="#"> <img src="<?=base_url()?>assets/plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs"><?=$_SESSION['user']->name?></b></a>
+                    <a class="profile-pic" href="#"> <img src="<?=base_url()?>assets/plugins/images/users/varun.jpg" alt="user-img" width="36" class="img-circle"><b class="hidden-xs"><?=$_SESSION['user']->NAME?></b></a>
                 </li>
             </ul>
                 
@@ -179,7 +179,7 @@ input[type="radio"]:checked ~ label {
 
                 <ul class="nav borde2" id="side-menu">
                     <li>
-                        <a href="#" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Dashboard</a>
+                        <a href="#" class="waves-effect"><i class="fa fa-clock-o fa-fw" aria-hidden="true"></i>Inicio</a>
                     </li>
                     <li>
                         <a href="#" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Profile</a>
