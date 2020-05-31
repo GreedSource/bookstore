@@ -101,7 +101,7 @@ border-radius: 5px;
                             <button type="submit" class="btn btn-success btn-block btn-lg">Registrarse</button>
                         </div>
                         <div class="m-t-20 m-b-40 p-b-40 text-inverse">
-                            ¿Ya estás registrado? Presiona <a href="<?=base_url()?>login">aqui</a> para login.
+                            ¿Ya estás registrado? Presiona <a href="<?=base_url()?>login" class="text-success">aqui</a> para login.
                         </div>
                         <hr />
                         <p class="text-center">
